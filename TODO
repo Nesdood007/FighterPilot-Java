@@ -1,0 +1,16 @@
+TODO:
+=====
+
+Go through entire project and plot out the different parts of it.
+
+Find the unfinished implementations of things and figure out a way to finish them. 
+
+Organize.
+
+Update OneNote file containing all technical details.
+
+Delete unnecessary code in project.
+
+Implement a way to Teleport Players to different parts of the map.
+Implement boundaries that a player cannot cross
+Implement a level switcher, for when using multiple levels is necessary

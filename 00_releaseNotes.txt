@@ -1,0 +1,21 @@
+FighterPilot 2 Release Notes.
+=============================
+FP2r0-01012016:
+First Release, or at least where I'm stopping for a while.
+Features:
+	A Working Fighterpilot Game. Shoot Away.
+	Multiple types of Enemies.
+	Random Level Generation.
+	Determination(not really).
+What should be looked for in the next release:
+	More Enemies.
+	Items and Effects.
+	More Players?
+	Better Level Generation.
+		Saving Levels to a file.
+	Blocks will be used.
+	
+I'm stopping development on this project for a while. I may pick it back up in the future.
+In it's current state, it plays, functions and looks better than the original ever could have.
+My original goal of remaking the game so that it can be easily extended has been completed.
+I will eventually finish the game.

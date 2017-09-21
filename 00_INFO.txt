@@ -1,0 +1,15 @@
+FighterPilot 2 Info
+===================
+This project was split off from the "LevelTestFormat" PRoject on 22 November 2015.
+The project was split to help make the removal of depreciated code easier and also help clean up the code.
+
+Make sure to update general LevelFormat Stuff in the LevelTestFormat project after main development is completed.
+
+---Info on Extending the Game---
+
+The FighterPilot2 Game is based off of the LevelFormatTest Project, which uses a modular level layout.
+
+The engine is designed to utilize interfaces to streamline the process of adding new sprites and blocks and the such.
+When adding new Sprites or Blocks, be sure to add them into the respective Enums so that they will be aded into random level generation as well as level reading and writing.
+
+For GameObjects that extend the Sprite or Block clases and therefore have more variables than just the default parent class does, use the SAVABLE Interface to import and export variables in a Formatted String.

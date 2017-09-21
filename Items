@@ -1,0 +1,55 @@
+Items:
+======
+
+There will be three types of items: those that affect Stats, those that spawn in something, and those that affect the level.
+
+Item Types: Affect Stats, Spawning, Affect Level (LevelEvent)
+
+Items that affect Stats:
+------------------------
+
+These items will affect stats of another GameObject that also implements Stats.
+
+These Items are Generic, meaning that all Items will have the stats, name, etc. entered into the Item Constructor in order to create the object.
+
+Example: Item("Item Name", 10,10,0,0,0,0,0). Pretty simple, and should also help reduce the amount of times that the game must be recompiled, and also should help prevent the need for a huge Java enum full of all items present in the game.
+
+This will make implementation easier.
+
+----------------------------
+Items that Spawn in Sprites:
+----------------------------
+
+These items will spawn in another sprite.
+
+These items, like Stats Items, are Generic, so the GameObject to be spawned in will be part of the Constructor.
+
+Example: Item<GameObject>("Item Name")
+
+----------------------------
+Items that Affect Global Level(LevelEvent)
+----------------------------
+These Items give a GameEvent. This will be implemented in the future, since I have not yet implemented GameEvent.
+
+
+---------
+Interface Inventory
+---------
+
+This gives a GameObject an Inventory
+
+----------
+Generic Item Abstract Class (Since there is no true "generic" item)
+-------------------------------------------------------------------
+
+All items have a weight, name and ID.
+
+----------
+Inventory:
+
+All inventories are extended from the Inventory abstract class
+
+There are a few types of inventory limits:	weight
+											amount of item types
+											amount of actual items
+											

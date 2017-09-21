@@ -1,0 +1,10 @@
+CutScenes:
+==========
+
+Cutscenes will be used to play animations among other things. These cutscenes will mainly be animations, not character sprites set on a level background.
+
+These cutscenes will make use of the Messager System as well as graphics, not necessarily the level format, though I guess it could be used.
+
+The Cutscene will be seperated into Cutscene Events that happen after a given amount of time. Cutscenes will draw stuff to the screen through the use of a method which takes in the Graphics2D object and then does whatever it needs to.
+
+In a nutshell, Scenes can be used as fancy backgrounds and other things which would involve a lot of drawing

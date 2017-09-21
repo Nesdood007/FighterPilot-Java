@@ -1,0 +1,88 @@
+Console Commands:
+=================
+
+A Console Command allows for easy debugging and implementation of other features within the game.
+
+The first iteration of the console will be in the actual console, where the program is started.
+
+When the console is started, it will call on a command defined in a startCommand variable.
+
+I want to have the command system to be modular, so that there is no list that needs to be updated, but simply just a way to access the command just by the name (Class.forName()?)
+
+The user will enter text containing the Command name, and arguments.
+
+---
+
+Each command should implement a Command Inerface and should be housed in a different class.
+These classes will then be added to a Map using the COMMAND NAME as the key and the actual command class as the Command name.
+
+
+---
+The Commands will be housed as follows: 
+
+package terminalInterface:
+[Console Class<where the terminal interface starts>]
+
+[Command<Parent class of the Terminal commands>]
+	[<Commands>...]
+	[Help --> prints all possible commands along with breif description of what they do]
+	[Title --> prints out the FighterPilot2 Logo in Ascii characters]
+	[Command: --> changes command settings.]
+	[...Other Commands...]
+	
+...
+<in the root directory>
+{TextFile: commands.lst --> Has a list of the fully Qualified Class names that implement commands. Command class loads this at startup.}
+
+---
+Each command class can have multiple commands, the list of commands will be propagated from all classes that implement the Command Interface, using a method.
+
+---
+Full Command List
+-----------------
+
+help	Displays a list of all commands
+title	Displays the FigherPilot2 Logo
+command	Changes Command Settings(Housed in Console class)
+echo	repeats whatever is typed after it back to the terminal instance
+quit	Quits the game
+level	Changes level settings, i.e can load a new level
+gamemode	Changes the Game Mode (Call it Game State?)
+spawn	Spawns a sprite in the level
+camera	Changes the camera position
+button	Changes the state of a button
+sprite	Changes the settings of a sprite
+find	can find GameObjects, such as Levels, Sprites, Blocks, Items, Commands, etc.
+
+---
+Detailed List
+-------------
+
+Command: help
+Contained in class: Console
+Function: Lists all possible commands and basic syntax for entering commands
+
+Command: title
+Contained in class: Console
+Function: Prints out the FighterPilot2 Logo
+
+Command: command
+Contained in Class: Console
+Function: changes settings of commands, such as adding a new command or removing an old command.
+
+-
+
+Command: echo
+Contained in class: Echo.java
+Function: This will be the first test of Functions. Prints out whatever was entered.
+
+Command: quit
+Contained in Class: FighterPilotGame.java
+Function: will end the game
+
+Command: level
+Contained in Class: FighterPilotGame.java
+Function: changes level settings
+
+ 
+

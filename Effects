@@ -1,0 +1,24 @@
+Effects : Stats
+===============
+
+Effects affect stats over a given period of time, and are essentially StatsItems that can affect the stats of a given GameObject.
+
+Effects work in three modes: Add, Multiply and Replace (as well as Subtract and divide, respectively)
+
+Effects will be added to a GameObject's currentEffectList if an effect is applied to an object.
+
+Effects have a DURATION during which an effect will be active
+
+Modes:
+	Replace
+		-This will replace a given stat for the duration and restore the old value at the end
+	Add
+		-This will add something to a given stat each time the duration is updated
+	Multiply
+		-This will multiply a given stat by something each time the duration is updated
+		
+Implementation in a GameObject:
+
+The Sprite will handle the adjusting of Stats by use of a method to go through all effects and adjust the respective stats accordingly.
+
+However, if Stats were to have methods to allow Effects to change Stats, that might make implementation easier, however having the methods to do that might affect the way I want the program to work

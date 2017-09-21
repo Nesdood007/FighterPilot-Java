@@ -1,0 +1,46 @@
+/**Creates new KeyBinder Object.
+	 * 
+	 */
+	public keyBinder(){
+	    //Inits class
+	    keyStore = new int[players.length + 1][6];//Have enough buttons for the Players plus camera
+
+	}
+
+	/**Creates new KeyBinder Object
+	 * 
+	 * @param numberPlayers Number of players (Camera Controls are added)
+	 */
+	public keyBinder(int numberPlayers){
+	    //Inits class
+	    keyStore = new int[numberPlayers + 1][6];//Have enough buttons for the Players plus camera
+	}
+
+	/**Interactive Method: Maps all keys using a terminal interface.
+	 * 
+	 */
+	public void mapKeys(){
+	    //Maps all keys.
+
+	}
+
+	/**Maps one key
+	 * 
+	 * @param entity Player/Entity to map keys of
+	 * @param button Button to map
+	 * @param newValue New button Value to map to
+	 */
+	public void mapKey(int entity, int button, int newValue){
+	    keyStore[entity][button] = newValue;
+	}
+
+	/**Gets a key
+	 * 
+	 * @param entity Entity to get key from
+	 * @param button Button to get keyValue from
+	 * @return New KeyValue
+	 */
+	public int getKey(int entity, int button){
+	    return keyStore[entity][button];
+	}
+    }

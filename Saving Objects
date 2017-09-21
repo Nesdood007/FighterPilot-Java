@@ -1,0 +1,16 @@
+Saving Objects that are not Blocks or Sprites using VarLists
+============================================================
+
+For Game Objects that are not Sprites or Blocks, the individual variables will be saved using formatted String with the variables.
+
+Example using Enemy:
+
+Enemy{ loc{x = 0.0, y = 0.0} ... speed = 0.001, coolDown = 1000}
+
+The above String will then be fed into the sprite using the "buildObject" method : buildObject(<formatted variable list>).
+
+The object will then build itself using this code, setting the other variables to the proper settings.
+
+Have separate VarList Class?
+
+Also, it may help to have an interpreter for each interface that can be used by a GameObject, in addition to the VarList

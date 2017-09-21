@@ -1,0 +1,26 @@
+Master List of Features Present in FighterPilot2
+================================================
+Already Implemented
+-------------------
+Level Format
+	-Sprites
+	-Blocks
+	-Backgrounds
+Animations
+SpriteSheet*
+	<Write Constructor that allows for a single image to be divided>
+AI
+Stats*
+	<Interface is finished, but needs to be implemented within Player>
+
+-------------------
+Needs Implementing
+-------------------
+Items - Finish
+Messages
+GameEvents
+Input
+Scene
+Level Generation/Saving/Reading from file
+Physics
+TerminalInterface

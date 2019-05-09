@@ -1,6 +1,8 @@
 # FighterPilot-Java
 Old Java Game that I wrote as a learning excercise when I was in High School and also during my freshman year at USC.
 
+[Here is a Demo Video on Youtube of it.](https://www.youtube.com/watch?v=a17pFXZS934)
+
 ## **IMPORTANT:** 
 __This Game is no longer maintained. It is an old abandoned project I wrote a few years ago.__
 

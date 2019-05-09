@@ -170,7 +170,7 @@ public class FighterPilotGame extends JPanel {//can extend Canvas, but there is 
             System.out.println("Set Default Music.");
         }
         bgmusic = AudioManager.loadSound("Music/title.wav", true);
-        bgmusic.play();
+        //bgmusic.play();
 
         DoGameLoop dgl = new DoGameLoop();
         (new Thread(dgl)).start();

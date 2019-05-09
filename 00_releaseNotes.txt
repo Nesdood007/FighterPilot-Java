@@ -6,7 +6,7 @@ Features:
 	A Working Fighterpilot Game. Shoot Away.
 	Multiple types of Enemies.
 	Random Level Generation.
-	Determination(not really).
+	Determination(note really).
 What should be looked for in the next release:
 	More Enemies.
 	Items and Effects.

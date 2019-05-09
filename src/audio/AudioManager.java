@@ -100,6 +100,7 @@ public class AudioManager implements Runnable {
          * @param loop Loops the audio if true
          */
         public void play() {
+        	if (!this.clip.isOpen()) return; //Dpon't do anything if line isn't open
             stop();
             if(loop) {
                 clip.loop(Clip.LOOP_CONTINUOUSLY);
@@ -117,12 +118,14 @@ public class AudioManager implements Runnable {
          * 
          */
         public void pause() {
+        	if (!this.clip.isOpen()) return; //Don't do anything if line isn't open
             clip.stop();
         }
         /**Stops the audio
          * 
          */
         public void stop() {
+        	if (!this.clip.isOpen()) return; //Don't do anything if line isn't open
             clip.stop();
             clip.setFramePosition(0);
         }
@@ -130,12 +133,14 @@ public class AudioManager implements Runnable {
          * 
          */
         public void goTo(int frames) {
+        	if (!this.clip.isOpen()) return; //Don't do anything if line isn't open
             clip.setFramePosition(frames);
         }
         /**Fades out the music
          * 
          */
         public void fadeOut(double seconds) {
+        	if (!this.clip.isOpen()) return; //Don't do anything if line isn't open
 
             //FloatControl masterGain = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
             if (volume != null) {
@@ -165,6 +170,7 @@ public class AudioManager implements Runnable {
          * 
          */
         public void run(){
+        	if (!this.clip.isOpen()) return; //Don't do anything if line isn't open
             if(isFadingOut == true) {
                 int milliseconds = (int) (fadingTime * 1000);
                 double distance = volume.getValue() - volume.getMinimum();
@@ -181,7 +187,7 @@ public class AudioManager implements Runnable {
     public static void main(String[] args) {
         AudioManager am = new AudioManager();
         (new Thread(am)).start();
-        Sound music = AudioManager.loadSound("music/test.wav", true);
+        Sound music = AudioManager.loadSound("test.wav", true);
         music.play();
         try {
             Thread.sleep(4000);
